@@ -1,2 +1,2 @@
 Hello,
-Welcom to my first Vim file. This is good..
+Welcom to my first Vim file. This is good and Okay..
