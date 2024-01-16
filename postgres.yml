@@ -8,8 +8,12 @@ services:
       - POSTGRES_USER=your_username
       - POSTGRES_PASSWORD=your_password
       - POSTGRES_DB=my
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+volumes:
+  postgres_data:
