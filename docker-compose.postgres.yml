@@ -1,0 +1,24 @@
+services:
+  postgres_file_server:
+    image: postgres
+    ports:
+      - 5502:5432
+    environment:
+      - POSTGRES_USER=postgres_file_server
+      - POSTGRES_PASSWORD=postgres_file_server
+      - POSTGRES_DB=postgres_file_server
+    volumes:
+      - postgres_file_server_data:/var/lib/postgresql/data
+  postgres_glue:
+    image: postgres
+    ports:
+      - 5503:5432
+    environment:
+      - POSTGRES_USER=postgres_glue
+      - POSTGRES_PASSWORD=postgres_glue
+      - POSTGRES_DB=postgres_glue
+    volumes:
+      - postgres_glue_data:/var/lib/postgresql/data
+volumes:
+  postgres_file_server_data:
+  postgres_glue_data:
